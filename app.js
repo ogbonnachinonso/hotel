@@ -17,13 +17,15 @@ const Auth = require('./routes/auth');
 const Room = require('./routes/rooms');
 const User = require('./models/user');
 
-
+const connectDB = require('./config/db');
 
 require('dotenv').config();
 
 const cloudinary = require('cloudinary');
 require('./handler/cloudinary');
 const upload = require('./handler/multer');
+
+connectDB();
 
 const app = express();
 
@@ -33,19 +35,6 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-
-
-//mongoose setup
-mongoose.connect(process.env.DATABASE_LOCAL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false
-},
-  console.log('db connected')
-);
-
 
 //setting up express-session 
 app.use(
