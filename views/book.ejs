@@ -1,0 +1,145 @@
+<%- include('partials/header') -%>
+<section id="hero" class="d-flex align-items-center">
+
+  <div class="container-fluid" data-aos="fade-up">
+    <div class="row justify-content-center">
+      <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+        <h1>Super Deluxe Room</h1>
+        <h2>Just the right size, just the right space. It is the perfect place for...</h2>
+        <h6 class="card-title text-danger mt-2">&#8358; <span> 25,000 / per night</span></h6>
+        <div><a href="/book" class="btn-get-started scrollto">Book Now</a></div>
+      </div>
+      <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
+        <img src="assets/img/mountains.jpg" class="img-fluid animated" alt="">
+      </div>
+    </div>
+  </div>
+
+</section><!-- End Hero -->
+
+<div id="main-content" class="main-content">
+  <section class="booking">
+
+    <!-- <div class="banner" style="background-image: url('assets/img/woman.jpg');">
+      <div class="container-fluid px-0">
+        <div class="row px-0">
+          <div class="col-md-12">
+            <h1 class="title">
+              <div class="title-wrapper">
+                Super Deluxe Room
+              </div>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="container booking-container">
+      <div class="row">
+        <div class="col-sm-9">
+
+          <form action="https://galpinsuites.net/book/now" method="post" id="hotel-popup-results"
+            class="hotel-popup-results">
+            <input type="hidden" name="_token" value="JhmaK55d52ibmvmQZ6kH1nAr7lAqezOUSL3cwUE8">
+            <div class="room-head">
+              <h3 class="room-title mt-3">Book Room</h3>
+              <p class="description">Please enter the information to complete the book this room.</p>
+            </div>
+            <div id="success-message" class="status__message" style="display: none">
+              <img class="status__message__image" src="https://galpinsuites.net/assets/clients/images/success.svg"
+                alt=""> Your booking was received, we will contact you shortly
+            </div>
+            <div id="error-status" class="error-status" style="display: none">
+              <img class="" src="https://galpinsuites.net/assets/clients/images/error.png" alt=""> Error occur, Please
+              ensure you fill all fields correctly.</span>.
+            </div>
+
+            <div class="form-group form-field row">
+              <div class="col-md-6">
+                <label for="name" class="sr-only">Name</label>
+                <input type="text" name="name" id="name" required class="name form-control" placeholder="Your Name*"
+                  value="">
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="sr-only">Email</label>
+                <input type="text" name="email" id="email" required class="email form-control" placeholder="Your Email*"
+                  value="">
+              </div>
+            </div>
+
+
+            <div class="form-group form-field row">
+              <div class="col-md-6">
+                <label for="phone" class="sr-only">Phone</label>
+                <input type="tel" name="phone" id="phone" required class="phone form-control" placeholder="Your Phone*"
+                  value="">
+              </div>
+
+              <div class="col-md-6">
+                <label for="address" class="sr-only">Address</label>
+                <input type="text" name="address" id="address" required class="add form-control"
+                  placeholder="Your Address*" value="">
+              </div>
+            </div>
+
+            <div class="form-group form-field row">
+              <div class="col-md-6">
+                <label for="check_in_date" class="sr-only">Check In</label>
+                <input type="text" name="check_in" id="check_in_date" required class="check_in_date"
+                  placeholder="Check In Date" value="">
+              </div>
+              <div class="col-md-6">
+                <label for="check_out_date" class="sr-only">Check Out</label>
+                <input type="text" name="check_out" id="check_out_date" required class="check_out_date  "
+                  placeholder="Check Out  Date" value="">
+              </div>
+            </div>
+
+            <input type="hidden" name="room_id" value="3">
+            <div class="form-group form-field row">
+              <div class="col-md-6">
+                <label for="number_of_guests">Number of Guests</label>
+                <select id="number_of_guests" class="form-control" name="number_of_guests">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <div class="jumbotron sm reservation-policy">
+                  <h3>RESERVATION POLICY</h3>
+                  <ul>
+                    <li>Reservation cancellation is 48 hours.</li>
+                    <li>Reservation will be confirmed only if full payment is made.</li>
+                    <li>Full payment is taken at check-in.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="form-group justify-content-center">
+              <button class="submit btn btn-block btn-warning align-self-center" type="submit"
+                data-loading-text="Please wait...">Book Now</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-3 mt-3">
+          <div class="card " style="width: 18rem;">
+            <img src="assets/img/woman.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title title"><i class="fa fa-hotel"></i> Super Deluxe Room</h5>
+              <h6 class="card-title text-muted"><i class="fa fa-map-marker"></i> Ikeja</h6>
+              <h6 class="card-title text-danger">&#8358; <span> 25,000 / per night</span></h6>
+              <p class="card-text">Just the right size, just the right space. It is the perfect place for...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <%- include('partials/footer') -%>

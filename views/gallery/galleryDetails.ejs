@@ -1,0 +1,57 @@
+<%- include('../partials/header') -%>
+<div class="intro intro-single route bg-image" style="background-image: url(<%= gallery.imgUrl %>)">
+  <div class="overlay-mf"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+
+        <h2 class="intro-title mb-4"><span style="color: #263238">Gall</span><span style="color: #263238">ery</span>
+          <a href="/addRoom">
+            <span style="color: #f5f5f5">Det</span><span style="color: #f5f5f5">ails</span>
+          </a>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="bg">
+
+
+  <section class="gallery-details">
+    <div class="container">
+
+      <div class="gallery-details-container">
+
+        <div class="owl-carousel gallery-details-carousel">
+          <img src="<%= gallery.imgUrl %>" class="img-fluid" alt="">
+          <img src="<%= gallery.imgUrl %>" class="img-fluid" alt="">
+          <img src="https://res.cloudinary.com/minalabels/image/upload/v1614189617/couch_awm9wo.jpg" class="img-fluid"
+            alt="">
+        </div>
+
+        <div class="gallery-info" id="bg">
+          <h3>Gallery information</h3>
+          <ul>
+
+            <li><strong>Description</strong>: <%= gallery.description %></li>
+            <li><strong>Date Created</strong>: <%= gallery.createdAt.toLocaleDateString() %></li>
+          </ul>
+        </div>
+
+      </div>
+      <a href="/gallery" class="btn btn-secondary mt-3 mb-3">Back to Gallery</a>
+    </div>
+    <!-- <div class="gallery-description">
+      <h2>Description of the Room</h2>
+      <p class="pb-5">
+        
+      </p>
+    </div> -->
+    </div>
+  </section>
+
+
+
+</main>
+<%- include('../partials/footer') -%>

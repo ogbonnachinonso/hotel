@@ -1,0 +1,87 @@
+<%- include('../partials/header') -%>
+
+<div id="home" class="intro_1 route bg-image" style="background-image: url(https://res.cloudinary.com/minalabels/image/upload/v1614123639/bhtykfunmlvjwpegol6a.jpg)">
+
+  <div class="overlay-itro"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="intro-title book">Book Room</h3>
+              <p class="subtitle-b px-4 title-ss">
+                Please enter your information to complete reservation for this room.
+              </p>
+              <div class="line-m"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9">
+            <%- include('../partials/message')-%>
+            
+              <form action="/edit/<%= book.id %>" method="POST" >
+                
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" class=" input_form" value="<%= book.name %>">
+                </div>
+
+                <div class="form-group">
+                  <label for="email" >Email</label>
+                  <input type="text" name="email" id="email" class=" input_form"  value="<%= book.email %>">
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" >Phone</label>
+                  <input type="tel" name="phone" id="phone" class=" input_form"
+                     value="<%= book.phone %>">
+                </div>
+
+                <div class="form-group">
+                  <label for="address" >Address</label>
+                  <input type="text" name="address" id="address" class="input_form" value="<%= book.address %>">
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="checkIn" >Check In</label>
+                      <input type="date" name="checkIn"  class=" input_form" value="<%= book.checkIn %>">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="checkOut">Check Out</label>
+                      <input type="date" name="checkOut"  class="input_form" value="<%= book.checkOut %>">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-8  mb-4">
+                  <button class="submit btn btn-block  align-self-center" type="submit"
+                    data-loading-text="Please wait...">Save</button>
+                </div>
+              </form>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card " style="width: 20rem;">
+              <img src="assets/img/room_1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class=" title"><i class="fa fa-hotel"></i> Deluxe Room</h5>
+                <h6 class="card-title text-muted"><i class="fa fa-map-marker"></i> Abia</h6>
+                <h6 class="card-title text-danger">&#8358; <span> 25,000 / per night</span></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<%- include('../partials/footer') -%>

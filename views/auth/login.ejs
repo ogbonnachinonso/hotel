@@ -1,0 +1,27 @@
+<%- include('../partials/header')-%>
+<main class="login-pag" id="login" style="background-image: url(assets/img/bg.jpg)" >
+
+  <div class="container login_page mt-2">
+    <div class="col-sm-12">
+      <div class="car backgroun">
+        <div class="card-body mt-3">
+          <h2 class="mb-4 text-center text ">Login</h2>
+        
+          <form action="/login" method="POST" class="backgroun">
+            <div class="back">
+              <input required type="text" name="username" placeholder="Enter Username" class="text-white">
+            </div>
+            <div class="back">
+              <input required type="password" name="password"     placeholder="Enter Password">
+            </div>
+            <button class="btn butt btn-block mt-4" type="submit">Login</button><br>
+            <div class="float-right text-white py-2"><a href="/forgot">Forgot Password</a></div><br>
+            <a class="btn butt btn-block mt-4" href="/signup">Sign Up</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('../partials/footer')-%>
