@@ -48,13 +48,11 @@
               <div class="row">
                 <div class="col-sm-8">
                   <h2 class="w-title"><%= gallery.description %></h2>
-                  <!-- <div class="w-more">
-                    <span class="w-ctegory"> <%= gallery.createdAt.toLocaleDateString() %></span> 
-                  </div> -->
+                 
                 </div>
                 <div class="col-sm-4">
                   <div class="w-like">
-                    <a href="/gallery/<%= gallery.id %>"> <span class="ion-ios-plus-outline"></span></a>
+                    <a href="/gallery/<%= gallery.id %>" class="btn btn-secondary text-white mb-3 pb-2">View</a>
                   </div>
                 </div>
               </div>

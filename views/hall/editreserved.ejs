@@ -1,0 +1,68 @@
+<%- include('../partials/header') -%>
+
+<div id="home" class="intro_1 route bg-image" style="background-image: url(../assets/img/bg.jpg)">
+
+  <div class="overlay-itro"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="intro-title hall">Edit Hall</h3>
+              <p class="subtitle-b px-4 title-ss">
+                Please enter your information to complete reservation for this hall.
+              </p>
+              <div class="line-m"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 ">
+            <%- include('../partials/message')-%>
+            
+              <form action="/editReserved/<%= hall.id %>" method="POST" >
+                
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" class=" input_form" value="<%= hall.name %>">
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" >Phone</label>
+                  <input type="tel" name="phone" id="phone" class=" input_form"
+                     value="<%= hall.phone %>">
+                </div>
+
+                <div class="form-group">
+                  <label for="category" >category</label>
+                  <input type="text" name="category" id="category" class="input_form" value="<%= hall.category %>">
+                </div>
+
+                <div class="col-sm-8  mb-4">
+                  <button class="submit btn btn-block  align-self-center" type="submit"
+                    data-loading-text="Please wait...">Save</button>
+                </div>
+              </form>
+          </div>
+
+          <!-- <div class="col-md-3">
+            <div class="card " style="width: 20rem;">
+              <img src="../assets/img/hall.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class=" title"><i class="fa fa-hotel"></i> Deluxe Room</h5>
+                <h6 class="card-title text-muted"><i class="fa fa-map-marker"></i> Abia</h6>
+                <h6 class="card-title text-danger">&#8358; <span> 250,000 / per night</span></h6>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<%- include('../partials/footer') -%>

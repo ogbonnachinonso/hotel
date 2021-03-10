@@ -1,6 +1,6 @@
 <%- include('../partials/dash')-%>
 
-<!-- main content -->
+
 <div class="wrapper mt-5">
 
   <div class="row">
@@ -8,7 +8,7 @@
       <div class="card">
         <div class="card-header">
           <h3>
-            Gallery
+            Reservations
           </h3>
           <i class="fas fa-ellipsis-h"></i>
         </div>
@@ -17,26 +17,32 @@
           <table>
             <thead>
               <tr>
-                <th>Description</th>
-                <!-- <th>Date</th> -->
-                <th>Image</th>
-                <th><button type="button" class="btn btn-outline-danger btn-rounded btn-sm px-2"><a href="/create"
+                <th>Name</th>
+         
+                <th>Phone</th>
+                <th>Category</th>
+                <th>Date</th>
+                
+                <th><button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"><a href="/hall"
                       class="fas fa-pencil-alt mt-0"></a>
                     <i></i> </button></th>
               </tr>
             </thead>
             <tbody>
-              <% galleries.forEach((gallery)=>{%>
+              <% halls.forEach((hall)=>{%>
               <tr>
-                <td><%= gallery.description %></td>
-                <!-- <td><%= gallery.createdAt.toLocaleDateString() %></td> -->
-                <td><%= gallery.imgUrl %></td>
+                <td><%= hall.name %></td>
+                
+                <td><%= hall.phone %></td>
+                <td><%= hall.category %></td>
+                <td><%= hall.createdAt.toLocaleDateString() %></td>
+                
                 <td>
                   <i class="bg-success"></i>
-                  <a href="/editGallery/<%= gallery.id %>" style="text-decoration: none; color: #FFF;"
+                  <a href="/editReserved/<%= hall.id %>" style="text-decoration: none; color: #FFF;"
                     class="btn btn-success  mt-2">Edit</a>
 
-                  <form action="/deleteGallery/<%= gallery.id %>" method="POST" id="delete-form">
+                  <form action="/deleteReserved/<%= hall.id %>" method="POST" id="delete-form">
 
                     <i class="bg-danger"></i>
                     <button type="submit" class="btn btn-danger ">Delete</button>
@@ -52,8 +58,7 @@
 
   </div>
 </div>
-<!-- end main content -->
-<!-- import script -->
+
 <script src="../assets/vendor/jquery/jquery.min.js"></script>
 <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>

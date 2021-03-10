@@ -225,16 +225,5 @@ router.post('/newpassword',  (req, res) => {
     })
 });
 
-// Get route dashboard
-router.get("/admin",  (req, res) => {
-  Blog.find({})
-    .then(blogs => {
-      res.render('auth/dashboard', { blogs: blogs });
-    })
-    .catch(err => {
-      req.flash('error_msg', 'ERROR: +err');
-      res.redirect('/login');
-    })
-});
 
 module.exports = router;

@@ -9,9 +9,9 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h3 class="intro-title book">Book Room</h3>
+              <h3 class="intro-title book">Book Hall</h3>
               <p class="subtitle-b px-4 title-ss">
-                Please enter your information to complete reservation for this room.
+                Please enter your information to complete reservation for this hall.
               </p>
               <div class="line-m"></div>
             </div>
@@ -21,19 +21,14 @@
         <div class="row">
           <div class="col-md-9">
             <%- include('../partials/message')-%>
-            <form action="/booknow" method="post">
+            <form action="/bookhall" method="post">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" required class="input_form"
                   placeholder="Enter Your Name*" value="">
               </div>
 
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" required class="input_form"
-                  placeholder="Enter Your Email*" value="">
-              </div>
-
+            
               <div class="form-group">
                 <label for="phone" >Phone</label>
                 <input type="tel" name="phone" id="phone" required class="input_form"
@@ -41,41 +36,28 @@
               </div>
 
               <div class="form-group">
-                <label for="address" >Address</label>
-                <input type="text" name="address" id="address" required class="input_form"
-                  placeholder="Enter Your Address*" value="">
+                <label for="category" >Category</label>
+                <input type="text" name="category" id="category" required class="input_form"
+                  placeholder="Enter Hall Name*" value="">
               </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="checkIn" >Check In</label>
-                    <input type="date" name="checkIn"  required class="input_form"
-                      placeholder="Check In Date" value="">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="checkOut" >Check Out</label>
-                    <input type="date" name="checkOut" id="check_out_date" required class="input_form "
-                      placeholder="Check Out  Date" value="">
-                  </div>
-                </div>
+              <div class="form-group">
+                <label for="checkIn" >Check In</label>
+                <input type="date" name="checkIn"  required class="input_form"
+                  placeholder="Check In Date" value="">
               </div>
-              <div class="col-sm-8  mb-4">
+              
                 <button class="submit btn btn-block  align-self-center" type="submit"
                   data-loading-text="Please wait...">Book Now</button>
-              </div>
             </form>
           </div>
 
           <div class="col-md-3">
             <div class="card " style="width: 20rem;">
-              <img src="assets/img/room_1.jpg" class="card-img-top" alt="...">
+              <img src="assets/img/hall.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class=" title"><i class="fa fa-hotel"></i> Deluxe Room</h5>
+                <h5 class=" title"><i class=""></i> Princess Hall</h5>
                   <h6 class="card-title text-muted"><i class="fa fa-map-marker"></i> Abia</h6>
-                  <h6 class="card-title text-danger">&#8358; <span> 25,000 / per night</span></h6>
+                  <h6 class="card-title text-danger">&#8358; <span> 250,000 </span></h6>
               </div>
             </div>
           </div>

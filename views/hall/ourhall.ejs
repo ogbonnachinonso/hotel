@@ -8,7 +8,7 @@
       <div class="card">
         <div class="card-header">
           <h3>
-            Gallery
+            Halls
           </h3>
           <i class="fas fa-ellipsis-h"></i>
         </div>
@@ -17,26 +17,27 @@
           <table>
             <thead>
               <tr>
-                <th>Description</th>
-                <!-- <th>Date</th> -->
-                <th>Image</th>
-                <th><button type="button" class="btn btn-outline-danger btn-rounded btn-sm px-2"><a href="/create"
+                <th>Hall Name</th>
+              
+                <th>Cost</th>
+              
+                <th><button type="button" class="btn btn-outline-danger btn-rounded btn-sm px-2"><a href="/addHall"
                       class="fas fa-pencil-alt mt-0"></a>
                     <i></i> </button></th>
               </tr>
             </thead>
             <tbody>
-              <% galleries.forEach((gallery)=>{%>
+              <% eventhalls.forEach((eventhall)=>{%>
               <tr>
-                <td><%= gallery.description %></td>
-                <!-- <td><%= gallery.createdAt.toLocaleDateString() %></td> -->
-                <td><%= gallery.imgUrl %></td>
+                <td><%= eventhall.category %></td>
+                
+                <td><%= eventhall.cost %></td>
                 <td>
                   <i class="bg-success"></i>
-                  <a href="/editGallery/<%= gallery.id %>" style="text-decoration: none; color: #FFF;"
+                  <a href="/editHall/<%= eventhall.id %>" style="text-decoration: none; color: #FFF;"
                     class="btn btn-success  mt-2">Edit</a>
 
-                  <form action="/deleteGallery/<%= gallery.id %>" method="POST" id="delete-form">
+                  <form action="/deleteHall/<%= eventhall.id %>" method="POST" id="delete-form">
 
                     <i class="bg-danger"></i>
                     <button type="submit" class="btn btn-danger ">Delete</button>
@@ -53,7 +54,6 @@
   </div>
 </div>
 <!-- end main content -->
-<!-- import script -->
 <script src="../assets/vendor/jquery/jquery.min.js"></script>
 <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>

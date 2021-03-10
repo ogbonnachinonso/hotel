@@ -3,14 +3,14 @@
   <div class="container-fluid" data-aos="fade-up">
     <div class="row justify-content-center">
       <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-        <h1>Our Rooms</h1>
-        <h2>We have different classes of rooms, just the right size, just the right space for you. It is the perfect
-          place for your relaxation</h2>
-        <h6 class="card-title text-success mt-2">&#8358; <span> 25,000 / per night</span></h6>
-        <div><a href="/book" class="btn-get-started scrollto">Book Now</a></div>
+        <h1>Our Halls</h1>
+        <h2>We have different types of halls for different events . It is the perfect
+          place for any type of occasion</h2>
+        <h6 class="card-title text-success mt-2">&#8358; <span> 250,000</span></h6>
+        <div><a href="/hall" class="btn-get-started scrollto">Book Now</a></div>
       </div>
       <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-        <img src="assets/img/mountains.jpg" class="img-fluid animated" alt="">
+        <img src="assets/img/hall.jpg" class="img-fluid animated" alt="">
       </div>
     </div>
   </div>
@@ -23,32 +23,32 @@
       <div class="col-sm-12">
         <div class="title-box text-center">
           <h3 class="title-a">
-            Our Rooms
+            Our Halls
           </h3>
           <p class="subtitle-a px-4 title-ss">
-            Below are some of our rooms available. Feel free to check through and make the perfect choice for maximum comfort.
+            Below are some of our halls available. Feel free to check through and make the perfect choice for maximum comfort.
           </p>
           <div class="line-m"></div>
         </div>
       </div>
     </div>
     <div class="row">
-      <% rooms.forEach((room)=>{%> 
+      <% eventhalls.forEach((eventhall)=>{%> 
       <div class="col-md-4">
         <div class="work-box">
-          <a href="<%= room.imgUrl %>" data-gall="galleryGallery" class="venobox">
+          <a href="<%= eventhall.imgUrl %>" data-gall="galleryGallery" class="venobox">
             <div class="work-img">
-              <img src="<%= room.imgUrl %>" alt="" class="img-fluid">
+              <img src="<%= eventhall.imgUrl %>" alt="" class="img-fluid">
             </div>
           </a>
           <div class="work-content">
             <div class="row">
               <div class="col-sm-8">
-                <h2 class="w-title"><%= room.category %></h2>
+                <h2 class="w-title"><%= eventhall.category %></h2>
               </div>
               <div class="col-sm-4">
                 <div class="w-like">
-                  <a href="/rooms/<%= room.id %>"> <span class="btn btn-secondary">ViewRoom</span></a>
+                  <a href="/halls/<%= eventhall.id %>"> <span class="btn btn-secondary">ViewHall</span></a>
                 </div>
               </div>
             </div>
@@ -60,9 +60,6 @@
       <%})%>
       </div>
     </div>
-    <!-- <div class="view">
-      <a href="/gallery" id="LoadMore" class="btn-read_more scrollto mb-5">See More</a>
-    </div> -->
     <br>
 
 </section>

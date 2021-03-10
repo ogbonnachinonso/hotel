@@ -2,10 +2,10 @@
 <main class="login-pag" id="login" style="background-image: url(assets/img/bg.jpg)" >
 
   <div class="container login_page">
-    <h1 class="mb-3 mt-3 text-white">Add New Room</h1>
+    <h1 class="mb-3 mt-3 text-white">Add New Hall</h1>
     <%- include('../partials/message')-%>
    
-    <form action="/myRoom" method="POST" enctype="multipart/form-data">
+    <form action="/ourHall" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <label for="category">Category</label>
         <input name="category" id="category" class="form-control" >
@@ -24,7 +24,7 @@
             name="image" value="" required> 
    </div> 
    <div> 
-     <a href="/dashboard" class="btn btn-danger">Cancel</a>
+     <a href="/ourhalls" class="btn btn-danger">Cancel</a>
      <button type="submit" class="btn btn-secondary" >Save</button>
    </div> 
      

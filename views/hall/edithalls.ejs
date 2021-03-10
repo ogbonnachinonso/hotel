@@ -1,0 +1,35 @@
+<%- include('../partials/header')-%>
+<main class="login-pag" id="login" style="background-image: url(https://res.cloudinary.com/minalabels/image/upload/v1614170947/bride_640_nvxcqk.jpg)" >
+
+  <div class="container login_page">
+    <h1 class="mb-3 mt-3 text-white">Edit Post</h1>
+    <%- include('../partials/message')-%>
+   
+    <form action="/editHall/<%= eventhall.id %>" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input name="category" id="category" class="form-control" value="<%= eventhall.category %>">
+      </div>
+     <div class="form-group">
+       <label for="description">Description</label>
+       <textarea name="description" id="description" class="form-control" ><%= eventhall.description %></textarea>
+     </div>
+     <div class="form-group">
+      <label for="cost">Cost</label>
+      <input name="cost" id="cost" class="form-control" value="<%= eventhall.cost %>" >
+    </div>
+     <div class="form-group">
+       <label for="image">Upload Image</label> 
+       <input type="file" id="image" 
+              name="image" value="<%= eventhall.imgUrl %>" required> 
+     </div> 
+    
+     <a href="/dashboard" class="btn btn-danger">Cancel</a>
+     <button type="submit" class="btn btn-save">Save</button>
+    </form>
+   </div>
+   
+</main>
+
+
+<%- include('../partials/footer')-%>

@@ -15,6 +15,7 @@ const Gallery = require('./routes/gallery');
 const Book = require('./routes/bookRoom');
 const Auth = require('./routes/auth');
 const Room = require('./routes/rooms');
+const Hall = require('./routes/hall');
 const User = require('./models/user');
 
 const connectDB = require('./config/db');
@@ -45,7 +46,7 @@ app.use(
   })
 );
 
-passport 
+passport
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new localStrategy({ usernameField: 'username' },
@@ -65,10 +66,12 @@ app.use((req, res, next) => {
 })
 
 app.use(Router);
- app.use(Auth);
- app.use(Gallery);
- app.use(Book); 
- app.use(Room); 
+app.use(Auth);
+app.use(Gallery);
+app.use(Book);
+app.use(Room);
+app.use(Hall)
+
 
 const port = process.env.PORT || 6000;
 app.listen(port, () => console.log(`server up on port ${port}`))

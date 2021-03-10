@@ -1,0 +1,57 @@
+<%- include('../partials/header') -%>
+<div class="intro intro-single route bg-image" style="background-image: url(<%= eventhall.imgUrl %>)">
+  <div class="overlay-mf"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+
+        <h2 class="intro-title mb-4"><span style="color: #263238">Sin</span><span style="color: #263238">gle</span>
+          <a href="/addHall">
+            <span style="color: #f5f5f5">Ha</span><span style="color: #f5f5f5">ll</span> 
+          </a>
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="bg">
+
+
+  <section class="gallery-details">
+    <div class="container">
+
+      <div class="gallery-details-container">
+
+        <div class="owl-carousel gallery-details-carousel">
+          <img src="<%= eventhall.imgUrl %>" class="img-fluid" alt="">
+          <img src="https://res.cloudinary.com/minalabels/image/upload/v1614189491/batheventhalls_hz6fiv.jpg" class="img-fluid" alt="">
+          <img src="https://res.cloudinary.com/minalabels/image/upload/v1614189617/couch_awm9wo.jpg" class="img-fluid" alt="">
+        </div>
+
+        <div class="gallery-info" id="bg">
+          <h3>Hall information</h3>
+          <ul>
+
+            <li><strong>Category</strong>: <%= eventhall.category %></li>
+            <li><strong>Cost</strong>: <%= eventhall.cost %></li>
+            <li><strong>Date Created</strong>: <%= eventhall.createdAt.toLocaleDateString() %></li>
+          </ul>
+        </div>
+
+      </div>
+      <a href="/halls" class="btn btn-secondary mt-3 mb-3">Back to Halls</a>
+    </div>
+    <div class="gallery-description">
+      <h2 class="px-3">Description of the event hall</h2>
+      <p class="pb-5 px-4">
+        <%= eventhall.description %>
+      </p>
+    </div>
+    </div>
+  </section>
+
+
+
+</main>
+<%- include('../partials/footer') -%>
