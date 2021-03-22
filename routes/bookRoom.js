@@ -17,6 +17,7 @@ router.post('/booknow', async (req, res, next) => {
     book.name = req.body.name,
     book.email = req.body.email,
     book.address = req.body.address,
+    book.room = req.body.room,
     book.phone = req.body.phone,
     book.checkIn = req.body.checkIn,
     book.checkOut = req.body.checkOut

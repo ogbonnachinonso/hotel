@@ -36,11 +36,16 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="category" >category</label>
-                  <input type="text" name="category" id="category" class="input_form" value="<%= hall.category %>">
+                  <label for="" >Choose Hall</label>
+                    <select name="category" class="form-group input_form" required>
+                      <option value="Gazie Hall">Gazie Hall</option>
+                      <option value="Princess Hall">Princess Hall</option>
+                      <option value="Conference Hall">Conference Hall</option>
+                      <option value="Meeting Room">Meeting Room</option>
+                    </select>
                 </div>
 
-                <div class="col-sm-8  mb-4">
+                <div class="col-sm-12  mb-4">
                   <button class="submit btn btn-block  align-self-center" type="submit"
                     data-loading-text="Please wait...">Save</button>
                 </div>

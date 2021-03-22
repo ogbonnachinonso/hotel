@@ -73,5 +73,5 @@ app.use(Room);
 app.use(Hall)
 
 
-const port = process.env.PORT || 6000;
+const port = process.env.PORT ||  6000;
 app.listen(port, () => console.log(`server up on port ${port}`))

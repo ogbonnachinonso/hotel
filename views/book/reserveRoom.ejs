@@ -46,23 +46,35 @@
                   placeholder="Enter Your Address*" value="">
               </div>
 
+              <label for="room" >Choose Room</label>
+              <select name="room" class="form-group input_form" required>
+                <option value="Gazie Room">Gazie Room</option>
+                <option value="Standard Room">Standard Room</option>
+                <option value="Deluxe Room">Deluxe Room</option>
+                <option value="Executive Room">Executive Room</option>
+                <option value="Super Deluxe Room">Super Deluxe Room</option>
+                <option value="Vip Room">VIP Room</option>
+                
+               
+              </select>
+
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="checkIn" >Check In</label>
                     <input type="date" name="checkIn"  required class="input_form"
-                      placeholder="Check In Date" value="">
+                      placeholder="Check In Date" value="<%= book.checkIn %>">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="checkOut" >Check Out</label>
-                    <input type="date" name="checkOut" id="check_out_date" required class="input_form "
-                      placeholder="Check Out  Date" value="">
+                    <input type="date" name="checkOut" id="checkOut" required class="input_form "
+                      placeholder="Check Out  Date" value="<%= book.checkOut === null ? '' : book. checkOut.toISOString().split('T')%>">
                   </div>
                 </div>
               </div>
-              <div class="col-sm-8  mb-4">
+              <div class="col-sm-12  mb-4">
                 <button class="submit btn btn-block  align-self-center" type="submit"
                   data-loading-text="Please wait...">Book Now</button>
               </div>

@@ -17,6 +17,10 @@ name: {
     type: String,
     required: true,
   },
+  room: {
+    type: String,
+    required: true,
+  },
   checkIn:{
     type: Date,
     required: true,
