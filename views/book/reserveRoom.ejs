@@ -1,6 +1,6 @@
 <%- include('../partials/header') -%>
 
-<div id="home" class="intro_1 route bg-image" style="background-image: url(assets/img/bg.jpg)">
+<div id="hom" class="intro_1 route bg-image" style="background-image: url(assets/img/bg.jpg)">
 
   <div class="overlay-itro"></div>
   <div class="intro-content display-table">
@@ -39,13 +39,11 @@
                 <input type="tel" name="phone" id="phone" required class="input_form"
                   placeholder="Enter Your Phone Number*" value="">
               </div>
-
               <div class="form-group">
                 <label for="address" >Address</label>
                 <input type="text" name="address" id="address" required class="input_form"
                   placeholder="Enter Your Address*" value="">
               </div>
-
               <label for="room" >Choose Room</label>
               <select name="room" class="form-group input_form" required>
                 <option value="Gazie Room">Gazie Room</option>
@@ -54,8 +52,6 @@
                 <option value="Executive Room">Executive Room</option>
                 <option value="Super Deluxe Room">Super Deluxe Room</option>
                 <option value="Vip Room">VIP Room</option>
-                
-               
               </select>
 
               <div class="row">
@@ -63,14 +59,14 @@
                   <div class="form-group">
                     <label for="checkIn" >Check In</label>
                     <input type="date" name="checkIn"  required class="input_form"
-                      placeholder="Check In Date" value="<%= book.checkIn %>">
+                      placeholder="Check In Date" value=" ">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="checkOut" >Check Out</label>
                     <input type="date" name="checkOut" id="checkOut" required class="input_form "
-                      placeholder="Check Out  Date" value="<%= book.checkOut === null ? '' : book. checkOut.toISOString().split('T')%>">
+                      placeholder="Check Out  Date" value="">
                   </div>
                 </div>
               </div>
@@ -81,7 +77,7 @@
             </form>
           </div>
 
-          <div class="col-md-3">
+          <div class="col-md-3 mb-5">
             <div class="card " style="width: 20rem;">
               <img src="assets/img/room_1.jpg" class="card-img-top" alt="...">
               <div class="card-body">

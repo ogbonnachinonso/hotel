@@ -735,7 +735,9 @@ a:hover {
   position: relative;
   color: #fff;
 }
-
+#hom{
+  height: 210vh;
+}
 .intro_1 {
   height: 190vh;
   position: relative;
