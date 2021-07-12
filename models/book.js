@@ -24,12 +24,13 @@ name: {
   checkIn:{
     type: Date,
     required: true,
-   
+    default: Date.now,
+
   },
   checkOut:{
     type: Date,
     required: true,
-    
+    default: Date.now,
   },
   createdAt:{
     type: Date,

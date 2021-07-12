@@ -13,14 +13,18 @@ router.get('/book', (req, res) => {
 // Post routes Add Room
 router.post('/booknow', async (req, res, next) => {
   try {
+    let checkIn = req.body.checkIn;
+    let checkOut = req.body.checkOut;
     const book = new Book()
     book.name = req.body.name,
     book.email = req.body.email,
     book.address = req.body.address,
     book.room = req.body.room,
     book.phone = req.body.phone,
-    book.checkIn = req.body.checkIn,
-    book.checkOut = req.body.checkOut
+    book.checkIn = checkIn;
+    // console.log(checkIn);
+    book.checkOut = checkOut;
+    // console.log(checkOut);
     await book.save()
     req.flash('success_msg', 'Your booking was received, we will contact you shortly')
     res.redirect('/book')

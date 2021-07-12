@@ -37,8 +37,8 @@
                 <td><%= book.phone %></td>
                 <td><%= book.address %></td>
                 <td><%= book.room %></td>
-                <td><%= book.createdAt.toLocaleDateString() %></td>
-                <td><%= book.CheckOut %></td>
+                <td><%= book.checkIn.toLocaleDateString() %></td>
+                <td><%= book.checkOut.toLocaleDateString() %></td>
                 <td>
                   <i class="bg-success"></i>
                   <a href="/edit/<%= book.id %>" style="text-decoration: none; color: #FFF;"
